@@ -1,0 +1,57 @@
+<!-- contactMe.ejs Created by Taejun Jang(301228129) - Created on October 20, 2022 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../views/../partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <%- include('../views/../partials/header'); %>
+        </header>
+    <nav>
+        <ul>
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/aboutMe">About Me</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactMe">Contact Me</a></li>
+            <li><a href="/login">Login</a></li>           
+        </ul>
+    </nav>
+    </nav>
+    <main>
+        <div id="mainDiv">
+            <div>
+                <h2><%= title %></h2>
+                <button id="addBtn"><a href="/contact-list/add">Add</button></a>
+                <br>
+                <table id="contactTbl">
+                    <!-- Header Row-->
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact Number</th>
+                        <th>Email</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+    
+                    <!-- Repeatable Template Row -->
+    
+                    <% for(let count = 0; count < ContactList.length; count++) { %>
+                        <tr>
+                            <td><%= ContactList[count].name %></td>
+                            <td><%= ContactList[count].number %></td>
+                            <td><%= ContactList[count].email %></td>
+                            <td><button><a href="/contact-list/update/<%= ContactList[count]._id %>">Edit</button></a></td>
+                            <td><button><a href="/contact-list/delete/<%= ContactList[count]._id %>">Delete</button></a></td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+      </main>
+    <footer>
+        <%- include('../views/../partials/footer'); %>
+    </footer>
+    </body>
+</html>

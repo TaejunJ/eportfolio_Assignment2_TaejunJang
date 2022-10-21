@@ -1,0 +1,50 @@
+<!-- contactMe.ejs Created by Taejun Jang(301228129) - Created on October 20, 2022 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../views/../partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <%- include('../views/../partials/header2'); %>
+        </header>
+    <nav>
+        <ul>
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/aboutMe">About Me</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactMe">Contact Me</a></li>
+            <li><a href="/contact-list">Business Contact</a></li>
+        </ul>
+    </nav>
+    </nav>
+    <main>
+        <div id="contactDiv">
+            <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+        <div>
+            <%= messages %>
+        </div>
+    <% } %>
+
+            <div>
+                <h2>Please Register</h2>
+                <form method="POST" autocomplete="off">
+                    <fieldset>
+                        <p><label for="username">ID: </label><input type="text" id="username" name="username" required placeholder="Enter ID" autofocus></p>
+                        <p><label for="password">Password: </label><input type="text" id="password" name="password" required placeholder="Enter Password"></p>
+                        <p><label for="email">Email: </label><input type="text" id="email" name="email" required placeholder="Enter Email"></p>
+                        <p><label for="displayName">Name: </label><input type="text" id="displayName" name="displayName" required placeholder="Enter Name"></p>
+                        <input type="submit" id="submit" value="Register" name="submit">
+                        <button><a href="/">Cancel</a></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+      </main>
+    <footer>
+        <%- include('../views/../partials/footer'); %>
+    </footer>
+    </body>
+</html>

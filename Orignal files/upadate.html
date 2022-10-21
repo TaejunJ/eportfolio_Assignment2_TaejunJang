@@ -1,0 +1,39 @@
+<!-- homePage.html Created by Taejun Jang(301228129) - Created on September 26, 2022 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>COMP 229 - Web Application Development(Assignment1)</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assignment1.css" />
+    </head>
+    <body>
+        <header>
+            <img src="images/TJ logo.jpg" id="logo" alt="TJLogo"  height="100" width="150">
+            <h1>Welcome to TJ world</h1>
+        </header>
+    <nav>
+        <ul>
+            <li><a href="/aboutMe">About Me</a></li>
+            <li><a href="/project">Projects</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactMe">Contact Me</a></li>
+        </ul>
+    </nav>
+    <div id="mainDiv">
+        <h2>Please fill the form to update!</h2>
+        <form action="/businessContactList" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <legend>update</legend>
+            <p><label for="name">Name: </label><input type="text" id="name" name="name"></p>
+            <p><label for="Number">Contact Number: </label><input type="text" id="number" name="number"></p>
+            <p><label for="email">Email: </label><input type="text" id="email" name="email"></p>
+            <input type="submit" id="update" value="update" name="submit">
+            <button></button>
+        </fieldset>
+    </form>
+    </div>
+    <footer>
+        <p id="copyright">&copy; Copyright Centennial College - COMP229 - Assignment1 -Taejun Jang(301228129)</p>
+    </footer>
+    </body>
+</html>

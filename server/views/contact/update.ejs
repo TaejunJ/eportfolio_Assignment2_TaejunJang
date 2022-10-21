@@ -1,0 +1,43 @@
+<!-- contactMe.ejs Created by Taejun Jang(301228129) - Created on October 20, 2022 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../views/../partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <%- include('../views/../partials/header2'); %>
+        </header>
+    <nav>
+        <ul>
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/aboutMe">About Me</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactMe">Contact Me</a></li>
+            <li><a href="/contact-list">Business Contact</a></li>
+        </ul>
+    </nav>
+    </nav>
+    <main>
+        <div id="contactDiv">
+            <div>
+                <h2><%= title %></h2>
+                <form method="POST">
+                    <fieldset>
+                        <p><label for="name">Name: </label><input type="text" id="name" name="name" value="<%= contact.name %>" required placeholder="Name"></p>
+                        <p><label for="number">Phone Number: </label><input type="text" id="number" name="number" value="<%= contact.number %>" required placeholder="Phone Number"></p>
+                        <p><label for="email">Email: </label><input type="text" id="email" name="email" value="<%= contact.email %>" required placeholder="Email"></p>
+                        <input type="submit" id="submit" value="Submit" name="submit">
+                        <td><button><a href="/contact-list/delete/<%= contact._id %>">Delete</button></a></td>
+                        <a href="/contact-list"><button>Cancel</button></a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+      </main>
+    <footer>
+        <%- include('../views/../partials/footer'); %>
+    </footer>
+    </body>
+</html>

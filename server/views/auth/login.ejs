@@ -1,0 +1,49 @@
+<!-- contactMe.ejs Created by Taejun Jang(301228129) - Created on October 20, 2022 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../views/../partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <%- include('../views/../partials/header2'); %>
+        </header>
+    <nav>
+        <ul>
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/aboutMe">About Me</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactMe">Contact Me</a></li>
+            <li><a href="/contact-list">Business Contact</a></li>
+        </ul>
+    </nav>
+    </nav>
+    <main>
+        <div id="contactDiv">
+            <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+        <div style="text-align: center; color:red; font-size: 2em;">
+            <%= messages %>
+        </div>
+    <% } %>
+
+            <div>
+                <h2>Please login</h2>
+                <form action="" method="POST" autocomplete="off">
+                    <fieldset>
+                        <p><label for="username">Username: </label><input type="text" id="username" name="username" required placeholder="Enter username" autofocus></p>
+                        <p><label for="password">Password: </label><input type="password" id="password" name="password" required placeholder="Enter Password"></p>
+                        <p><button><a href="/register">Register here</a></button></p>
+                        <input type="submit" id="submit" value="Login" name="submit">
+                        <button><a href="/">Cancel</a></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+      </main>
+    <footer>
+        <%- include('../views/../partials/footer'); %>
+    </footer>
+    </body>
+</html>
